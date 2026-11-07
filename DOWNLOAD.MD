@@ -2,6 +2,8 @@
 
 A small Snake game that runs in your terminal, written in Python.
 
+> **Keep in mind:** Make sure you have Python and any required packages installed for your operating system. Windows needs `windows-curses`; macOS and Linux generally already include `curses` with Python.
+
 ## 1. Install Python
 
 You need Python 3. Check whether it is already installed by opening a terminal (Command Prompt or PowerShell on Windows) and running:
@@ -63,8 +65,6 @@ python3 snek.py
 ```
 
 If `python3` is not recognized, try `python snek.py`.
-
-> **Keep in mind:** Make sure you have Python and any required packages installed for your operating system. Windows needs `windows-curses`; macOS and Linux generally already include `curses` with Python.
 
 ## Controls
 
