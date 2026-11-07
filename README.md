@@ -1,6 +1,6 @@
 # Terminal Snake
 
-A colorful Snake game that runs in your terminal, written in Python. Eat berries to score points, grow longer, and try to avoid the walls, your tail, and obstacles.
+A colorful Snake game that runs in your terminal, written in Python. Eat berries to score points, grow longer, and avoid your tail and obstacles.
 
 ## Download and setup
 
@@ -20,14 +20,13 @@ On Windows, install `windows-curses` once with `py -m pip install windows-curses
 py snek.py
 ```
 
-## Start screen
+## Features
 
-- Press **Enter** to play.
-- Press **H** to switch between **Classic** and **Hard** mode.
-- Press **S** to turn terminal-bell sound effects on or off.
-- Press **Q** to quit.
-
-Hard mode starts faster and places more obstacles on the board.
+- **Start screen:** press **Enter** to play, **H** to switch modes, **S** to toggle terminal-bell sounds, or **Q** to quit.
+- **Classic and Hard modes:** Hard mode starts faster and has more obstacles.
+- **Special berries:** normal berries grow the snake; boost berries speed it up; slow berries slow it down; shield berries protect against one collision.
+- **Obstacles:** avoid blocks shown as `##`.
+- **Local high scores:** the top five scores for each mode are saved on your computer in `.snek_scores.json` in your home directory.
 
 ## Controls
 
@@ -38,22 +37,15 @@ Hard mode starts faster and places more obstacles on the board.
 | **Q** | Quit the current round |
 | **R** | Retry after game over |
 
-## Berries and effects
+## Roadmap
 
-| Berry | Appearance | Points | Effect |
-| --- | --- | ---: | --- |
-| Normal | `()` | 10 | Adds to your score and grows the snake |
-| Boost | `++` | 20 | Temporarily speeds up the snake |
-| Slow | `--` | 15 | Temporarily slows down the snake |
-| Shield | `[]` | 15 | Blocks one collision and returns the snake to the center |
+Ideas for future improvements—these are not implemented yet:
 
-Obstacles are shown as `##`. Hitting an obstacle, the edge, or your own body ends the round unless a shield absorbs the collision.
-
-## High scores and sound
-
-The game keeps the top five scores separately for Classic and Hard mode in `.snek_scores.json` in your home directory. Scores are stored on your computer, not uploaded to GitHub. If the file cannot be written, the game still works but scores will not persist.
-
-Sound effects use your terminal's bell. Some terminal applications or system settings mute the bell; toggle it from the start screen with **S**.
+- Add more berry types and special effects.
+- Let players choose board size or customize colors.
+- Add a pause menu with options and a resume prompt.
+- Add automated tests for game rules and scoring.
+- Improve terminal resizing and accessibility.
 
 ## Requirements
 
