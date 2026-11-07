@@ -66,9 +66,10 @@ python3 snek.py
 
 If `python3` is not recognized, try `python snek.py`.
 
-## Controls
+## Controls and options
 
-- **Arrow keys** or **WASD** — move
-- **P** — pause or resume
-- **Q** — quit
-- **R** — retry after game over
+At the start screen, press **Enter** to begin, **H** to toggle Hard mode, **S** to toggle sound, or **Q** to quit. During a round, use **Arrow keys** or **WASD** to move, **P** to pause, and **Q** to quit. Press **R** after game over to retry.
+
+## Keep your high scores
+
+The game saves the top five scores for each mode in `.snek_scores.json` in your home directory. Those scores stay on your computer and are not uploaded to the repository.
