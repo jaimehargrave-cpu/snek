@@ -253,7 +253,6 @@ def play(stdscr, high_score, hard_mode, sound_enabled, board_size, skin_index):
             time.sleep(0.005)
         else:
             pass
-        # A pause breaks the input loop; do not advance the snake on that frame.
         if time.monotonic() >= end or key in (ord("p"), ord("P")):
             if key in (ord("p"), ord("P")):
                 continue
@@ -294,9 +293,6 @@ def play(stdscr, high_score, hard_mode, sound_enabled, board_size, skin_index):
             elif effect == "shrink":
                 for _ in range(min(2, len(snake) - 1)):
                     snake.pop()
-            if effect != "shrink":
-                # Eating berries normally grows the snake.
-                pass
             food, food_kind = spawn_food(snake, rows, cols, obstacles, hazards)
             if food is None:
                 return score, False
@@ -367,12 +363,12 @@ def main(stdscr):
             break
         mode = "hard" if hard_mode else "classic"
         board_size = BOARD_SIZES[board_index]
-        previous_best = max(scores.get(mode, [0]))
+        previous_best = max(scores.get(mode) or [0])
         while True:
             score, quit_round = play(stdscr, previous_best, hard_mode, sound_enabled, board_size, skin_index)
             new_record = score > previous_best
             save_score(scores, mode, score)
-            best = max(scores.get(mode, [0]))
+            best = max(scores.get(mode) or [0])
             if quit_round:
                 break
             result = game_over(stdscr, score, best, new_record)
