@@ -64,6 +64,8 @@ python3 snek.py
 
 If `python3` is not recognized, try `python snek.py`.
 
+> **Keep in mind:** Make sure you have Python and any required packages installed for your operating system. Windows needs `windows-curses`; macOS and Linux generally already include `curses` with Python.
+
 ## Controls
 
 - **Arrow keys** or **WASD** — move
